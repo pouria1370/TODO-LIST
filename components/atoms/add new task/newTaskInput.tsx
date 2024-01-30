@@ -17,7 +17,6 @@ const NewTaskInput = () => {
     e.preventDefault()
     const newTask: Task = { id: `newId${new Date().getSeconds()}`, name }
     if (isInputValid) {
-      console.log("hellow");
       ; setTaskInProgress(newTask)
     }
     setName(""),
@@ -31,7 +30,7 @@ const NewTaskInput = () => {
   }
 
   return (
-    <form className='flex flex-row w-full justify-between' dir='rtl' onSubmit={e => submitHandler(e)}>
+    <form role='form' className='flex flex-row w-full justify-between' dir='rtl' onSubmit={e => submitHandler(e)}>
       <div className='flex flex-col w-full ml-5'>
         <input type='text' onChange={changeHandler} placeholder='امروز میخوام....'
           className='font-vazir-adad text-sm outline-none border px-5 border-text h-9 border-opacity-10 ml-3
@@ -43,7 +42,7 @@ const NewTaskInput = () => {
           failureMessage={null} /> : <VerificationMessage successMessage={null}
             failureMessage="مقدار وارد شده صحیح نمی باشد خواهشا از فونت پارسی استفاده کنید" /> : null}
       </div>
-      <GeneralButton disabled={isInputValid === true ? false : true} size="sm" text='افزودن' type="submit" />
+      <GeneralButton disabled={isInputValid === true ? false : true} size="sm" text='submit' type="submit" />
     </form>
   )
 }

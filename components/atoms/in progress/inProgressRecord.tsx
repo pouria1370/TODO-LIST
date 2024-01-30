@@ -33,7 +33,7 @@ setDeleteInProgressTask(currentTask)
         <div id={id} className="flex flex-row justify-between gap-6 w-full" >
            <div className="flex flex-row justify-between gap-6" onClick={inProgressHandler}>
            <BsCircle />
-            <div className="relative font-vazir-adad text-gray text-opacity-70 text-sm">
+            <div  role="InProgress" className="relative font-vazir-adad text-gray text-opacity-70 text-sm">
                 {text}
             </div>
            </div>

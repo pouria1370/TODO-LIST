@@ -25,7 +25,7 @@ export default function DoneReecord({ text, id, handler }: DoneTask) {
     return (
         <div id={id} className="flex flex-row gap-6 w-full" onClick={inDoneHandler}>
             <AiFillCheckSquare />
-            <div className="relative font-vazir-adad text-gray text-opacity-70 text-sm">
+            <div role="doneTask" className="relative font-vazir-adad text-gray text-opacity-70 text-sm">
                 {text}
                 <div className="h-[1px] w-full -top-[0.5rem] bg-dark relative"></div>
             </div>

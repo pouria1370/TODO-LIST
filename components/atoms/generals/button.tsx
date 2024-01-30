@@ -11,6 +11,7 @@ const GeneralButton = ({ text, handler, size,type,disabled }:Button) => {
   return (
     <button
     disabled={disabled}
+      name="submit"
       className={
         size == "md" 
           ? "rounded-md disabled:bg-gray disabled:bg-opacity-30  text-sm w-[200px] h-[35px] flex flex-col items-center justify-center  font-vazir hover:text-white text-light hover:bg-secondary px-5 py-2 bg-primary"
