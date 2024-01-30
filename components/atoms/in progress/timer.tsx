@@ -33,7 +33,7 @@ const reverHandler = ()  => {
        }
 
    }
- }, [isGoingTobeFired,collapsingTime])
+ }, [isGoingTobeFired,collapsingTime,setIsGoingToBeFired])
 
   return  (isGoingTobeFired &&
     <div className='h-12 w-full flex flex-row justify-between items-center bg-gray bg-opacity-30'>  
