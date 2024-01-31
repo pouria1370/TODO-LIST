@@ -5,7 +5,8 @@ import { BsTrashFill } from "@react-icons/all-files/bs/BsTrashFill";
 interface DoneTask {
     text: String,
     id: any,
-    handler: (item: any) => void
+    handler: (item: any) => void,
+    key: String
 }
 
 

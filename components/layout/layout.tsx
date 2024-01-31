@@ -1,6 +1,6 @@
 'use client'
 import useCashInLocal from '@/actions/clienSideActions/cashInLocal'
-import React from 'react'
+import React, { useEffect } from 'react'
 
 const TodoLayout = ({children}:{children:React.ReactNode}) => {
   useCashInLocal()

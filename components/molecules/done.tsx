@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import DoneReecord from '../atoms/done/doneRecord'
-import { Container } from '../atoms/generals/container'
+import { TodoContainer } from '../atoms/generals/container'
 import { useTodoZustand } from '@/store/todoZustandCreate'
 
 const DoneTasks = () => {
@@ -10,9 +10,9 @@ const DoneTasks = () => {
 
 
   return (
-    <Container name="انجام شده" concatClass='w-full gap-5'>
-        {doneTasks.map((item,index) => <DoneReecord handler={setRevertTaskInProgress} id={`doneTask${index}`} text={item.name}/>)}
-    </Container>
+    <TodoContainer name="انجام شده" concatClass='w-full gap-5'>
+        {doneTasks.map((item,index) => <DoneReecord key={`doneTask${index}`}  handler={setRevertTaskInProgress} id={`doneTask${index}`} text={item.name}/>)}
+    </TodoContainer>
   )
 }
 

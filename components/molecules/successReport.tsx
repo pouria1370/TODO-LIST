@@ -1,6 +1,6 @@
 'use client'
 import React from 'react'
-import { Container } from '../atoms/generals/container'
+import { TodoContainer } from '../atoms/generals/container'
 import { SuccessReportChart } from '../atoms/success report/chart'
 import ChartData from '../atoms/success report/chartData'
 import { useTodoZustand } from '@/store/todoZustandCreate'
@@ -11,7 +11,7 @@ const allDoneTasks = useTodoZustand(state => state.doneTasks)
 
 
   return (
-    <Container name="گزارش موفقیت " concatClass="w-full  h-full">
+    <TodoContainer name="گزارش موفقیت " concatClass="w-full  h-full">
       <div className='flex flex-row w-full items-center justify-end'>
         <div className='basis-1/2'>
           <SuccessReportChart />
@@ -20,7 +20,7 @@ const allDoneTasks = useTodoZustand(state => state.doneTasks)
           <ChartData allPercentage={allInrpogressTasks.length + allDoneTasks.length} successPercentage={allDoneTasks.length} />
         </div>
       </div>
-    </Container>
+    </TodoContainer>
   )
 }
 
